@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    margin: 5px 20px;
+}
+
+.navitem{
+    display: grid;
+    align-items: center;
+}
+
+#collapsibleNavId ul{
+    display: flex;
+    gap: 20px;
+}
+
+#collapsibleNavId ul li a{
+    padding-left: 5px;
+}
+
+#collapsibleNavId ul li a:hover{
+    color: #F47521 !important;
+}
+
+.orange{
+    background-color: #F47521 !important;
+    border: none;
+}
+
+.orange:hover{
+    background-color: #df6b1e !important;
+}
+
+.title{
+    margin: 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+.card img {
+    width: 200px;
+    height: auto;
+}
+
+#more{
+    cursor: pointer;
+}
+
+.non-active{
+    height: 51.8vh;
+    overflow: hidden;
+}
+
+.active{
+    height: auto;
+    overflow: visible;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}   
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media screen and (max-width: 576px) {
+
+    #collapsibleNavId ul{
+        gap: 0;
+    }
+
+    .secretLiar{
+        width: 350px;
+        height: auto;
+    }
+
+    .filter{
+        border-bottom: 1px solid #CCCCCC;
+    }
+}

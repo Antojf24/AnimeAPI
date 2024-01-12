@@ -95,9 +95,7 @@ html{
 
 
 @media screen and (max-width: 992px) {
-    #animes {
-        justify-content: space-between; /* Alinea las cartas en el espacio disponible */
-    }
+    
 
     .card {
         flex: 0 0 calc(48% - 20px); /* Muestra 2 cartas por fila */

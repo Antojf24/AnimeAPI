@@ -86,6 +86,10 @@ html{
     height: auto; /* Mantiene la proporción original de la imagen */
 }
 
+span{
+    color: red;
+}
+
 @media screen and (max-width: 576px) {
     /* Ajusta el estilo para pantallas más pequeñas si es necesario */
     .card {

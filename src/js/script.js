@@ -6,13 +6,25 @@ fetch(API)
     .then((res) => res.json())
     .then((data) => {
         data.data.forEach((anime) => {
-            animes.innerHTML += `
-            <div class="card col-2 justify-content-center align-items-center m-1">
-            <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
-            <h3>${anime.title}</h3>
-            <button class="btn orange text-white">Go watch <i class="fa-regular fa-share-from-square"></i></button>
-            </div>
-            `;
+            if(anime.trailer.url != null){
+                animes.innerHTML += `
+                <div class="card col-2 justify-content-center align-items-center m-1">
+                <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
+                <h3>${anime.title}</h3>
+                <a class="btn orange text-white" href="${anime.trailer.url}">Go watch <i class="fa-regular fa-share-from-square"></i></a>
+                </div>
+                `;
+            }else{
+                animes.innerHTML += `
+                <div class="card col-2 justify-content-center align-items-center m-1">
+                <img src="${anime.images.jpg.image_url}" alt="${anime.title}">
+                <h3>${anime.title}</h3>
+                <button class="btn orange text-white">Go watch <i class="fa-regular fa-share-from-square"></i></button>
+                <span>Trailer not available</span>
+                </div>
+                `;
+            }
+           
         })
     })
 

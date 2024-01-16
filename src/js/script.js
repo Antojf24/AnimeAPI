@@ -40,4 +40,19 @@ more.addEventListener("click", function() {
         animes.classList.add("non-active");
         more.innerHTML = 'Show more <i class="fa-solid fa-chevron-down"></i>';
     }
+});//Añadir a favoritos
+document.addEventListener('DOMContentLoaded', function () {
+    var favoriteButton = document.getElementById('favoriteButton');
+
+    favoriteButton.addEventListener('click', function () {
+        alert('Añadir a favoritos');
+    });
+    var botonesAgregarFavoritos = document.querySelectorAll('.btnAgregarFavoritos');
+
+    botonesAgregarFavoritos.forEach(function (boton) {
+        boton.addEventListener('click', function () {
+            var cartaId = boton.getAttribute('data-carta-id');
+            alert('Agregar a favoritos: ' + cartaId);
+        });
+    });
 });
